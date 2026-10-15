@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>O período de oscilação de um pêndulo simples</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;0,700;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Literata:opsz,wght@7..72,400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+    <div id="progresso"></div>
+    <nav class="local">
+        <div id="grupo-principal" class="grupo-botoes">
+            <button data-sec="inicio">introdução</button>
+            <button data-sec="teoria">embasamento</button>
+            <button data-sec="materiais">materiais</button>
+            <button data-sec="arranjo">arranjo</button>
+            <button data-sec="procedimento">procedimento</button>
+            <button data-sec="ex">variáveis</button>
+            <button data-sec="conclusao">conclusão</button>
+        </div>
+        <div id="grupo-variaveis" class="grupo-botoes escondido">
+            <button data-sec="inicio">← voltar</button>
+            <button data-sec="ex">explicações</button>
+            <button data-sec="corda">corda</button>
+            <button data-sec="angulo">ângulo</button>
+            <button data-sec="peso">peso</button>
+        </div>
+    </nav>
+
+    <main>
+        <section id="inicio" class="sesao ativadax">
+            <div class="hero">
+                <div>
+                    <h1>O período de oscilação de um pêndulo simples</h1>
+                    <p> <b>Isabela Sassá <br> Júlia Schuler <br> Kaline Caetano <br> Miguel Ribeiro </b></p>
+                    <p class="pergunta"><b>Pergunta investigativa:</b> como o comprimento da corda, a massa do corpo
+                        suspenso e a amplitude angular inicial influenciam o período de um pêndulo simples?</p>
+                </div>
+                <svg class="pendulo" viewBox="0 0 240 290" role="img" aria-label="Pêndulo oscilando">
+                    <path class="arco" d="M12 223 A230 230 0 0 0 228 223" />
+                    <line class="vertical" x1="120" y1="20" x2="120" y2="250" />
+                    <g class="balanco">
+                        <line class="fio" x1="120" y1="20" x2="120" y2="228" />
+                        <circle class="massa" cx="120" cy="250" r="22" />
+                    </g>
+                    <rect class="suporte" x="70" y="8" width="100" height="12" rx="6" />
+                    <circle class="pivo" cx="120" cy="20" r="4" />
+                </svg>
+            </div>
+
+            <div class="resultados">
+                <div class="res"><b>Comprimento</b><strong>influencia</strong><span>T de 1,432 s a 2,262 s</span></div>
+                <div class="res"><b>Massa</b><strong>não influencia</strong><span>2,266 s · 2,265 s · 2,266 s</span></div>
+                <div class="res"><b>Ângulo</b><strong>influencia</strong><span>+6,6% entre 5° e 60°</span></div>
+            </div>
+
+            <h2>Introdução</h2>
+            <p>O pêndulo simples é um sistema formado por um corpo suspenso por uma corda leve e aproximadamente
+                inextensível. Quando o corpo é afastado da posição de equilíbrio e solto, ele realiza um movimento
+                oscilatório. Neste experimento, foram analisadas três grandezas que podem estar relacionadas ao período
+                de oscilação: o comprimento da corda, a massa do corpo suspenso e a amplitude angular inicial. Foram
+                investigadas as relações entre essas grandezas e o período de oscilação.</p>
+            <p>Para o comprimento da corda, para a massa e para a amplitude angular, foram realizadas medições do tempo
+                de 10 oscilações, calculando-se depois os períodos médios.</p>
+        </section>
+
+        <section id="teoria" class="sesao">
+            <h1>Fundamentação teórica</h1>
+            <h3>Cinemática: período de oscilação</h3>
+            <p>O período T corresponde ao tempo necessário para o pêndulo realizar uma oscilação completa. Como as
+                medições foram feitas para 10 oscilações, o período individual foi calculado por:</p>
+            <p class="eq">T = t / 10</p>
+            <p>Para pequenas amplitudes, o modelo do pêndulo simples prevê que o período depende do comprimento L e da
+                aceleração da gravidade g, mas não depende da massa m do corpo suspenso:</p>
+            <p class="eq">T = 2π √(L/g)</p>
+            <p>Elevando a expressão ao quadrado, obtém-se a forma linearizada:</p>
+            <p class="eq">T² = (4π²/g) · L</p>
+            <p>Assim, no gráfico de T² em função de L, o coeficiente angular da reta corresponde a 4π²/g. Com esse
+                coeficiente é possível calcular experimentalmente a aceleração da gravidade. A massa não aparece nessa
+                expressão, indicando que, no modelo ideal e para pequenas amplitudes, corpos de massas diferentes devem
+                apresentar aproximadamente o mesmo período quando o comprimento e a amplitude são mantidos constantes.
+            </p>
+
+            <h3>Dependência com a massa e com a amplitude angular</h3>
+            <p>No modelo ideal do pêndulo simples, a massa do corpo suspenso não altera o período de oscilação. Por
+                isso, ao comparar diferentes massas, mantendo o comprimento da corda e a amplitude angular constantes,
+                espera-se obter valores de período próximos entre si. Já a amplitude angular pode influenciar o período
+                quando deixa de ser pequena.</p>
+            <p>Para pequenas amplitudes, costuma-se considerar que o período é praticamente independente do ângulo
+                inicial. Entretanto, quando a amplitude aumenta, essa aproximação deixa de representar exatamente o
+                movimento. Neste trabalho foi utilizado o modelo simplificado de primeira ordem indicado no roteiro:</p>
+            <p class="eq">T(θ₀) ≈ T₀ (1 + θ₀²/16)</p>
+            <p>Nessa expressão, T₀ é o período de referência para pequenas amplitudes e θ₀ deve ser convertido para
+                radianos. Por isso, a análise angular foi feita por meio da razão T(θ₀)/T₀.</p>
+            <img src="diagrama-forcas.jpeg" alt="Diagrama de forças no pêndulo simples: tensão, mg sen θ e mg cos θ">
+        </section>
+
+        <section id="materiais" class="sesao">
+            <h1>Materiais</h1>
+            <img src="materiais.jpeg" alt="Tabela de materiais: corda, corpo suspenso, suporte, régua, transferidor e cronômetro">
+        </section>
+
+        <section id="arranjo" class="sesao">
+            <h1>Arranjo experimental</h1>
+            <p>O sistema experimental foi montado com um corpo suspenso por uma corda, formando um pêndulo simples. O
+                comprimento da corda foi medido desde o ponto de fixação até o centro do corpo suspenso. Para a análise
+                do comprimento, foram utilizados cinco valores entre <b>0,40 m</b> e <b>1,20 m</b>. Para a análise da
+                massa, devem ser utilizados corpos de massas diferentes, mantendo as demais condições constantes. Para
+                a análise angular, foram utilizados os ângulos de <b>5°, 10°, 20°, 30°, 45° e 60°</b>.</p>
+            <p>Em cada condição foram realizadas três medições do tempo necessário para completar <b>10
+                    oscilações</b>. Os tempos foram utilizados para calcular o período médio e a dispersão das medidas.
+            </p>
+
+            <h2>Incerteza dos instrumentos de medida</h2>
+            <p>A principal incerteza associada à cronometragem está relacionada ao tempo de reação durante o
+                acionamento e parada do cronômetro. A realização de 10 oscilações por medida reduz a influência
+                relativa desse erro sobre o período. Além disso, a dispersão experimental foi estimada pela diferença
+                entre o maior e o menor período obtido em cada conjunto de três medidas.</p>
+        </section>
+
+        <section id="procedimento" class="sesao">
+            <h1>Procedimento experimental</h1>
+            <h2>Preparação</h2>
+            <ul>
+                <li>Montar o pêndulo em uma ventosa e verificar se o ponto de suspensão permanece estável.</li>
+                <li>Medir o comprimento da corda desde o ponto de fixação até o centro do corpo suspenso.</li>
+                <li>Para a primeira etapa, escolher os cinco comprimentos utilizados na tabela de dados.</li>
+                <li>Para a segunda etapa, manter o comprimento e a amplitude angular constantes e realizar as
+                    medições utilizando as diferentes massas disponíveis.</li>
+                <li>Para a etapa angular, manter o comprimento e a massa constantes e definir as amplitudes de 5°,
+                    10°, 20°, 30°, 45° e 60°. Posicionar o corpo na amplitude escolhida sem fornecer impulso inicial.
+                </li>
+            </ul>
+
+            <h2>Coleta de dados</h2>
+            <ul>
+                <li>Soltar o pêndulo a partir do repouso.</li>
+                <li>Medir o tempo necessário para completar 10 oscilações completas.</li>
+                <li>Repetir a medida três vezes para cada ângulo e cinco vezes para cada comprimento.</li>
+                <li>Registrar todas as medidas.</li>
+                <li>Calcular o tempo médio e dividir por 10 para obter o período médio.</li>
+                <li>Na etapa da massa, repetir o procedimento para cada corpo, mantendo o comprimento e a amplitude
+                    angular constantes, e calcular o período médio de cada condição.</li>
+            </ul>
+
+            <h2>Precauções</h2>
+            <p>Foi necessário evitar impulsos durante a soltura do corpo, manter o suporte estável e realizar as
+                medições sempre com o mesmo procedimento. Na determinação dos ângulos maiores, deve-se ter atenção à
+                leitura do transferidor e à posição de soltura para reduzir erros de paralaxe.</p>
+            <img src="procedimento.jpeg" alt="Pêndulo montado, sendo solto a partir de um ângulo inicial" style="max-width: 320px">
+        </section>
+
+        <section id="ex" class="sesao">
+            <h1>Medições e preenchimento de tabelas</h1>
+            <p>Todas as medições foram organizadas com suas unidades, médias e estimativas de dispersão. A tabela
+                referente à massa foi organizada para comparar as diferentes massas utilizadas no experimento.</p>
+
+            <h1>Análise gráfica</h1>
+            <p>Os gráficos foram construídos a partir dos valores médios dos períodos. Na análise do comprimento, foram
+                usados os gráficos T × L e T² × L. Para a massa, foi utilizado o gráfico do período médio em função da
+                massa, mantendo o comprimento em 60 cm e a amplitude em 10°. Na análise da amplitude, foi utilizado o
+                gráfico T(θ₀)/T₀ × θ₀, com o ângulo em radianos.</p>
+        </section>
+
+        <section id="corda" class="sesao">
+            <h1>Variação da corda</h1>
+            <h2>Tabela da variação da corda</h2>
+            <p class="dica">Deslize a tabela para o lado para ver tudo.</p>
+            <div class="tabela"><img src="tabelacorda.png" alt="Tabela com tempos, período médio, incerteza e T² para cada comprimento"></div>
+            <p>Os tempos médios correspondem ao tempo para 10 oscilações. O período médio foi obtido dividindo esse
+                valor por 10. O peso utilizado tinha 60 g e o ângulo era 10 graus.</p>
+
+            <h2>Gráfico da variação de corda: T</h2>
+            <img src="graficoc.png" alt="Gráfico do período T em função do comprimento L">
+            <p>Gráfico do período (T) em função do comprimento da corda (L). O gráfico mostra que o período de
+                oscilação aumenta conforme a corda fica mais longa, indicando uma relação direta entre as grandezas.
+            </p>
+
+            <h2>Gráfico da variação de corda: T²</h2>
+            <img src="graficoquadrado.png" alt="Gráfico de T² em função de L com reta de ajuste">
+            <p>Gráfico de T² em função de L. A linha de reta ajustada mostra um bom resultado (R² = 0,994), com a
+                equação y = 3,7838x + 0,4629, o que nos ajuda a calcular a gravidade local, que seria 10,43 m/s².</p>
+        </section>
+
+        <section id="angulo" class="sesao">
+            <h1>Variação de ângulo</h1>
+            <h2>Tabela da variação de ângulo</h2>
+            <p class="dica">Deslize a tabela para o lado para ver tudo.</p>
+            <div class="tabela"><img src="tabelagulo.png" alt="Tabela com tempos, período médio, incerteza e razão T/T₀ para cada ângulo"></div>
+            <p><b>T₀ = 1,627 s, obtido para θ₀ = 5°.</b></p>
+            <p>O peso utilizado tinha 60 g e a corda possuía 60 cm.</p>
+
+            <h2>Gráfico da variação de ângulo</h2>
+            <img src="gragulo.png" alt="Gráfico da razão T/T₀ em função do ângulo inicial">
+            <p>Gráfico da razão do período pela amplitude angular inicial. Dá para perceber que o período cresce um
+                pouco quando aumentamos o ângulo de soltura, saindo de 1,000 e chegando a 1,066.</p>
+        </section>
+
+        <section id="peso" class="sesao">
+            <h1>Variação de peso</h1>
+            <h2>Tabela da variação de peso</h2>
+            <p class="dica">Deslize a tabela para o lado para ver tudo.</p>
+            <div class="tabela"><img src="tabelapeso.png" alt="Tabela com tempos e período médio para cada massa"></div>
+            <p>A corda utilizada possuía 120 cm e o ângulo era 10 graus.</p>
+
+            <h2>Gráfico da variação de peso</h2>
+            <img src="graficop.png" alt="Gráfico do período em função da massa">
+            <p>Gráfico do período em função da massa do corpo. Os pontos mostram que mudar a massa (0,06 kg a 0,18 kg)
+                praticamente não altera o período de oscilação do pêndulo.</p>
+        </section>
+
+        <section id="conclusao" class="sesao">
+            <h1>Discussão dos resultados</h1>
+            <p>A análise de dados experimentais permitiu avaliar a influência da amplitude angular inicial (θ₀) sobre o
+                período de oscilação do pêndulo simples. A partir do gráfico da razão do período pela amplitude angular
+                inicial, observa-se que o período cresce gradativamente com o aumento do ângulo de soltura, saindo de
+                1,000 e chegando a 1,066 na maior amplitude testada. Esse comportamento apresentou um perfil não
+                linear, e a variação observada no período foi maior do que as incertezas experimentais associadas à
+                cronometragem, o que confirma a relevância estatística e a validade da tendência identificada.</p>
+            <p>O mecanismo físico responsável por essa variação está associado à aproximação para pequenas oscilações
+                adotada na teoria do pêndulo simples. Para ângulos pequenos (θ ≤ 10°), assume-se a aproximação sen θ ≈
+                θ, o que torna a força restauradora linear e resulta em um período independente da amplitude. No
+                entanto, para amplitudes maiores, os termos de ordem superior da expansão em série do seno tornam-se
+                significativos, fazendo com que a força restauradora cresça mais lentamente do que o ângulo de
+                deslocamento. Como consequência, o corpo leva mais tempo para completar um ciclo, resultando no aumento
+                do período.</p>
+            <p>Para garantir a confiabilidade dos dados, mantivemos fixos o comprimento do fio, a massa do corpo e o
+                ponto de fixação durante todo o teste. Quanto às limitações do experimento, percebemos que a resistência
+                do ar, o atrito no pivô e o tempo de reação ao acionar o cronômetro manualmente causaram pequenas
+                variações; por isso, usar sensores ópticos e um disparador mecânico ajudaria muito em testes futuros.
+                Por fim, fica claro que a mudança no período se deve essencialmente à não linearidade da força
+                restauradora em ângulos maiores, e não a eventuais oscilações na massa ou no tamanho do fio.</p>
+
+            <h1>Avaliação das incertezas e limitações</h1>
+            <p>As principais fontes de incerteza foram o tempo de reação ao iniciar e parar o cronômetro, pequenas
+                diferenças na posição de soltura do pêndulo, a leitura dos comprimentos e dos ângulos e possíveis erros
+                de paralaxe. A realização de várias oscilações antes de parar o cronômetro ajuda a diminuir a
+                influência relativa do tempo de reação. Mesmo assim, as pequenas diferenças observadas na etapa da
+                massa mostram que, para detectar efeitos muito pequenos, seria necessário um procedimento de
+                cronometragem ainda mais preciso.</p>
+            <p>Para melhorar o experimento, poderiam ser realizadas mais repetições para cada condição e utilizado um
+                sensor ou aplicativo de cronometragem automática, reduzindo a influência do tempo de reação. Também
+                seria importante manter com maior precisão o ponto de soltura e medir o comprimento da corda sempre da
+                mesma maneira.</p>
+
+            <h1>Conclusão</h1>
+            <p>O experimento investigou como o comprimento da corda, amplitude angular influenciam o período de um
+                pêndulo simples. Os resultados mostraram que o comprimento da corda influencia o período, pois, quando
+                o comprimento aumentou de 0,40 m para 1,20 m, o período aumentou de 1,432 s para 2,262 s. As incertezas
+                dos períodos ficaram entre 0,007 s e 0,012 s, sendo pequenas em comparação com a variação observada.</p>
+            <p>A massa não apresentou influência significativa no período nas condições analisadas. Para as massas de
+                60 g, 120 g e 180 g, os períodos foram, respectivamente, 2,266 s, 2,265 s e 2,266 s, com incertezas de
+                0,006 s, 0,001 s e 0,003 s. Essas diferenças são muito pequenas quando comparadas às respectivas
+                incertezas, indicando que a massa não influenciou de forma perceptível o período.</p>
+            <p>A amplitude angular também influenciou o período, principalmente nos maiores ângulos. A razão T/T₀ passou
+                de 1,000 em 5° para 1,066 em 60°, mostrando um aumento de aproximadamente 6,6% no período. As
+                incertezas obtidas, entre 0,007 s e 0,011 s, são menores que essa variação, indicando que o efeito
+                observado não pode ser explicado apenas pela incerteza experimental.</p>
+            <p><b>Portanto, considerando os dados e as margens de erro obtidas, conclui-se que o comprimento da corda e
+                    a amplitude angular influenciaram o período do pêndulo, enquanto a massa não apresentou influência
+                    significativa nas condições do experimento.</b> As principais fontes de incerteza estão
+                relacionadas à cronometragem manual, à posição de soltura do pêndulo e às medições do comprimento e do
+                ângulo.</p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
